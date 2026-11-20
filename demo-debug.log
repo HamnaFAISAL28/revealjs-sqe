@@ -1,0 +1,471 @@
+22:31:19.325 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+22:31:19.332 INFO  Project root configuration file: /usr/src/sonar-project.properties
+22:31:19.381 INFO  SonarScanner CLI 8.3.1.16491
+22:31:19.386 DEBUG Java 21.0.13 Amazon.com Inc. (64-bit)
+22:31:19.392 INFO  Linux 6.18.54.1-microsoft-standard-WSL2 amd64
+22:31:19.403 DEBUG Scanner max available memory: 1 GB
+22:31:19.453 DEBUG uname -m returned 'x86_64'
+22:31:19.457 DEBUG Using JVM default truststore: /usr/lib/jvm/java-21-amazon-corretto.x86_64/lib/security/cacerts
+22:31:19.459 DEBUG Download cache base directory: /opt/sonar-scanner/.sonar/cache
+22:31:19.460 DEBUG Create: /opt/sonar-scanner/.sonar/cache/_tmp
+22:31:19.600 DEBUG Loading OS trusted SSL certificates...
+22:31:19.600 DEBUG This operation might be slow or even get stuck. You can skip it by passing the scanner property 'sonar.scanner.skipSystemTruststore=true'
+22:31:19.962 DEBUG Loaded [135] system trusted certificates
+22:31:20.197 DEBUG Loaded truststore from '/usr/lib/jvm/java-21-amazon-corretto.x86_64/lib/security/cacerts' containing 135 certificates
+22:31:20.350 DEBUG --> GET http://host.docker.internal:9000/api/v2/analysis/version
+22:31:20.420 DEBUG <-- 200 http://host.docker.internal:9000/api/v2/analysis/version (69ms)
+22:31:20.421 INFO  Communicating with SonarQube Community Build 26.11.0.134175
+22:31:20.422 INFO  JRE provisioning: os[linux], arch[x86_64]
+22:31:20.422 DEBUG --> GET http://host.docker.internal:9000/api/v2/analysis/jres?os=linux&arch=x86_64
+22:31:20.437 DEBUG <-- 200 http://host.docker.internal:9000/api/v2/analysis/jres?os=linux&arch=x86_64 (14ms)
+22:31:20.490 DEBUG Download http://host.docker.internal:9000/api/v2/analysis/jres/f4e17091-1dca-4306-8447-a68248805664 to /opt/sonar-scanner/.sonar/cache/_tmp/OpenJDK21U-jre_x64_linux_hotspot_21.0.13_9.tar13777245860739695972gz
+22:31:20.491 DEBUG --> GET http://host.docker.internal:9000/api/v2/analysis/jres/f4e17091-1dca-4306-8447-a68248805664
+22:31:22.488 DEBUG <-- 200 http://host.docker.internal:9000/api/v2/analysis/jres/f4e17091-1dca-4306-8447-a68248805664 (1996ms)
+22:31:22.559 DEBUG Create: /opt/sonar-scanner/.sonar/cache/a535a1df9c6284d9618872984e026ae0352d1f7e9e0605425c0e6114f47351dd
+22:31:23.295 DEBUG Executing: /opt/sonar-scanner/.sonar/cache/a535a1df9c6284d9618872984e026ae0352d1f7e9e0605425c0e6114f47351dd/OpenJDK21U-jre_x64_linux_hotspot_21.0.13_9.tar.gz_extracted/jdk-21.0.13+9-jre/bin/java --version
+22:31:23.334 DEBUG openjdk 21.0.13 2026-10-20 LTS
+22:31:23.334 DEBUG OpenJDK Runtime Environment Temurin-21.0.13+9 (build 21.0.13+9-LTS)
+22:31:23.334 DEBUG OpenJDK 64-Bit Server VM Temurin-21.0.13+9 (build 21.0.13+9-LTS, mixed mode, sharing)
+22:31:23.337 DEBUG --> GET http://host.docker.internal:9000/api/v2/analysis/engine
+22:31:23.344 DEBUG <-- 200 http://host.docker.internal:9000/api/v2/analysis/engine (7ms)
+22:31:23.345 DEBUG Download http://host.docker.internal:9000/api/v2/analysis/engine to /opt/sonar-scanner/.sonar/cache/_tmp/sonar-scanner-engine-community-13.16.0.670517542262835953883376jar
+22:31:23.346 DEBUG --> GET http://host.docker.internal:9000/api/v2/analysis/engine
+22:31:25.297 DEBUG <-- 200 http://host.docker.internal:9000/api/v2/analysis/engine (1951ms)
+22:31:25.343 DEBUG Create: /opt/sonar-scanner/.sonar/cache/9a7be36a1f937fca09ac330e32b3cb33e0386cb6bbb9fdc30b9301f98f82ab9e
+22:31:25.347 DEBUG Work directory: /tmp/.scannerwork
+22:31:25.353 DEBUG Executing: /opt/sonar-scanner/.sonar/cache/a535a1df9c6284d9618872984e026ae0352d1f7e9e0605425c0e6114f47351dd/OpenJDK21U-jre_x64_linux_hotspot_21.0.13_9.tar.gz_extracted/jdk-21.0.13+9-jre/bin/java -Dorg.bouncycastle.pkcs12.ignore_useless_passwd=true -jar /opt/sonar-scanner/.sonar/cache/9a7be36a1f937fca09ac330e32b3cb33e0386cb6bbb9fdc30b9301f98f82ab9e/sonar-scanner-engine-community-13.16.0.6705.jar
+22:31:25.637 INFO  Starting SonarScanner Engine...
+22:31:25.638 INFO  Java 21.0.13 Eclipse Adoptium (64-bit)
+22:31:25.685 DEBUG JVM max available memory: 1 GB
+22:31:25.691 DEBUG Sonar User Home: /opt/sonar-scanner/.sonar
+22:31:25.834 DEBUG Loading OS trusted SSL certificates...
+22:31:25.834 DEBUG This operation might be slow or even get stuck. You can skip it by passing the scanner property 'sonar.scanner.skipSystemTruststore=true'
+22:31:26.147 DEBUG Loaded [135] system trusted certificates
+22:31:26.393 DEBUG Loaded truststore from '/usr/lib/jvm/java-21-amazon-corretto.x86_64/lib/security/cacerts' containing 135 certificates
+22:31:26.591 INFO  Load global settings
+22:31:26.624 DEBUG --> GET http://host.docker.internal:9000/api/settings/values.protobuf
+22:31:26.675 DEBUG <-- 200 http://host.docker.internal:9000/api/settings/values.protobuf (50ms, 8048-byte body)
+22:31:26.701 INFO  Load global settings (done) | time=110ms
+22:31:26.703 INFO  Server id: 147B411E-AaG3rMtH8O6oglmRLkhz
+22:31:26.708 DEBUG Could not detect any CI vendor
+22:31:26.781 DEBUG Scanner Engine Version 13.16.0.6705
+22:31:26.781 DEBUG SonarQube Server Edition Community
+22:31:26.934 DEBUG Create : /opt/sonar-scanner/.sonar/_tmp
+22:31:26.935 DEBUG User cache: /opt/sonar-scanner/.sonar/cache
+22:31:26.941 INFO  Loading required plugins
+22:31:26.941 INFO  Load plugins index
+22:31:26.942 DEBUG --> GET http://host.docker.internal:9000/api/plugins/installed
+22:31:26.951 DEBUG <-- 200 http://host.docker.internal:9000/api/plugins/installed (8ms, unknown-length body)
+22:31:26.958 INFO  Load plugins index (done) | time=15ms
+22:31:26.959 INFO  Load/download plugins
+22:31:26.963 DEBUG Download plugin 'iac' to '/opt/sonar-scanner/.sonar/_tmp/fileCache10019583711963306717.tmp'
+22:31:26.964 DEBUG --> GET http://host.docker.internal:9000/api/plugins/download?plugin=iac
+22:31:26.976 DEBUG <-- 200 http://host.docker.internal:9000/api/plugins/download?plugin=iac (11ms, unknown-length body)
+22:31:28.280 DEBUG Download plugin 'text' to '/opt/sonar-scanner/.sonar/_tmp/fileCache10002785888172994489.tmp'
+22:31:28.281 DEBUG --> GET http://host.docker.internal:9000/api/plugins/download?plugin=text
+22:31:28.289 DEBUG <-- 200 http://host.docker.internal:9000/api/plugins/download?plugin=text (8ms, unknown-length body)
+22:31:28.709 INFO  Load/download plugins (done) | time=1750ms
+22:31:28.710 DEBUG Plugins not loaded because they are optional: [csharp, flex, go, web, jacoco, java, javascript, kotlin, php, python, vbnet, xml]
+22:31:28.740 DEBUG Plugins loaded:
+22:31:28.741 DEBUG   * IaC Code Quality and Security 2.26.0.24580 (iac)
+22:31:28.741 DEBUG   * Text Code Quality and Security 2.53.0.13730 (text)
+22:31:28.776 DEBUG --> GET http://host.docker.internal:9000/api/server/version
+22:31:28.781 DEBUG <-- 200 http://host.docker.internal:9000/api/server/version (4ms, 14-byte body)
+22:31:28.781 DEBUG SonarQube Server Version 26.11.0.134175
+22:31:28.852 DEBUG register org.eclipse.jgit.util.FS$FileStoreAttributes$$Lambda/0x000074a660316168@1c5c616f with shutdown hook
+22:31:28.996 INFO  Load project settings for component key: 'demo-sqe'
+22:31:28.997 DEBUG --> GET http://host.docker.internal:9000/api/settings/values.protobuf?component=demo-sqe
+22:31:29.018 DEBUG <-- 200 http://host.docker.internal:9000/api/settings/values.protobuf?component=demo-sqe (21ms, 8058-byte body)
+22:31:29.020 INFO  Load project settings for component key: 'demo-sqe' (done) | time=24ms
+22:31:29.037 INFO  Process project properties
+22:31:29.039 DEBUG Build system auto-configuration was skipped: Disabled by default; set property 'sonar.scanner.autoconfig.enabled' to true to enable it
+22:31:29.054 INFO  Process project properties (done) | time=16ms
+22:31:29.066 INFO  Project key: demo-sqe
+22:31:29.067 INFO  Base dir: /usr/src
+22:31:29.067 INFO  Working dir: /tmp/.scannerwork
+22:31:29.068 DEBUG Project global encoding: UTF-8, default locale: en
+22:31:29.175 DEBUG loading config FileBasedConfig[/tmp/jgit/config]
+22:31:29.176 DEBUG readpipe [/usr/bin/git, --version],/usr/bin
+22:31:29.194 DEBUG readpipe may return 'git version 2.50.1'
+22:31:29.194 DEBUG remaining output:
+
+22:31:29.196 DEBUG readpipe [/usr/bin/git, config, --system, --show-origin, --list, -z],/usr/bin
+22:31:29.197 DEBUG readpipe may return ''
+22:31:29.198 DEBUG remaining output:
+
+22:31:29.244 DEBUG readpipe rc=128
+22:31:29.245 DEBUG Exception caught during execution of command '[/usr/bin/git, config, --system, --show-origin, --list, -z]' in '/usr/bin', return code '128', error message 'fatal: unable to read config file '/etc/gitconfig': No such file or directory
+'
+22:31:29.246 DEBUG loading config FileBasedConfig[/tmp/git/config]
+22:31:29.247 DEBUG loading config UserConfigFile[/tmp/.gitconfig]
+22:31:29.301 DEBUG Injecting GitHub organization property: {sonar.iac.internal.github_organization=hakimel}
+22:31:29.315 DEBUG Creating module hierarchy
+22:31:29.316 DEBUG   Init module 'Demo-Flawed-Code'
+22:31:29.319 DEBUG     Base dir: /usr/src
+22:31:29.319 DEBUG     Working dir: /tmp/.scannerwork
+22:31:29.319 DEBUG     Module global encoding: UTF-8, default locale: en
+22:31:29.340 INFO  Load quality profiles
+22:31:29.342 DEBUG --> GET http://host.docker.internal:9000/api/qualityprofiles/search.protobuf?project=demo-sqe
+22:31:29.446 DEBUG <-- 200 http://host.docker.internal:9000/api/qualityprofiles/search.protobuf?project=demo-sqe (103ms, 3078-byte body)
+22:31:29.459 INFO  Load quality profiles (done) | time=119ms
+22:31:29.498 INFO  Load active rules
+22:31:29.500 DEBUG --> GET http://host.docker.internal:9000/api/v2/analysis/active_rules?projectKey=demo-sqe
+22:31:29.583 DEBUG <-- 200 http://host.docker.internal:9000/api/v2/analysis/active_rules?projectKey=demo-sqe (83ms, unknown-length body)
+22:31:29.697 INFO  Load active rules (done) | time=197ms
+22:31:29.706 INFO  Load analysis cache
+22:31:29.706 DEBUG --> GET http://host.docker.internal:9000/api/analysis_cache/get?project=demo-sqe
+22:31:29.720 DEBUG <-- 200 http://host.docker.internal:9000/api/analysis_cache/get?project=demo-sqe (13ms, 2096-byte body)
+22:31:29.725 INFO  Load analysis cache (2.1 kB) | time=20ms
+22:31:29.748 DEBUG --> GET http://host.docker.internal:9000/api/languages/list
+22:31:29.755 DEBUG <-- 200 http://host.docker.internal:9000/api/languages/list (6ms, unknown-length body)
+22:31:29.764 DEBUG --> GET http://host.docker.internal:9000/api/features/list
+22:31:29.771 DEBUG <-- 200 http://host.docker.internal:9000/api/features/list (7ms, unknown-length body)
+22:31:29.818 DEBUG Git remote origin URL telemetry: https://github.com/hakimel/reveal.js.git
+22:31:29.850 DEBUG Declared patterns of language Kubernetes were converted to sonar.lang.patterns.kubernetes : 
+22:31:29.853 DEBUG Declared patterns of language CSS were converted to sonar.lang.patterns.css : **/*.css,**/*.less,**/*.scss,**/*.sass
+22:31:29.853 DEBUG Declared patterns of language JSP were converted to sonar.lang.patterns.jsp : **/*.jsp,**/*.jspf,**/*.jspx
+22:31:29.854 DEBUG Declared patterns of language Go were converted to sonar.lang.patterns.go : **/*.go
+22:31:29.854 DEBUG Declared patterns of language Kotlin were converted to sonar.lang.patterns.kotlin : **/*.kt,**/*.kts
+22:31:29.854 DEBUG Declared patterns of language JavaScript were converted to sonar.lang.patterns.js : **/*.js,**/*.jsx,**/*.cjs,**/*.mjs,**/*.vue
+22:31:29.854 DEBUG Declared patterns of language Python were converted to sonar.lang.patterns.py : **/*.py
+22:31:29.855 DEBUG Declared patterns of language Secrets were converted to sonar.lang.patterns.secrets : 
+22:31:29.855 DEBUG Declared patterns of language Docker were converted to sonar.lang.patterns.docker : **/*.dockerfile,**/Dockerfile,**/dockerfile,**/*.containerfile,**/Containerfile,**/containerfile
+22:31:29.855 DEBUG Declared patterns of language C# were converted to sonar.lang.patterns.cs : **/*.cs,**/*.razor
+22:31:29.855 DEBUG Declared patterns of language Java were converted to sonar.lang.patterns.java : **/*.java,**/*.jav
+22:31:29.855 DEBUG Declared patterns of language HTML were converted to sonar.lang.patterns.web : **/*.html,**/*.xhtml,**/*.cshtml,**/*.vbhtml,**/*.aspx,**/*.ascx,**/*.rhtml,**/*.erb,**/*.shtm,**/*.shtml,**/*.cmp,**/*.twig,**/*.htm
+22:31:29.855 DEBUG Declared patterns of language Flex were converted to sonar.lang.patterns.flex : **/*.as
+22:31:29.856 DEBUG Declared patterns of language XML were converted to sonar.lang.patterns.xml : **/*.xml,**/*.xsd,**/*.xsl,**/*.config
+22:31:29.856 DEBUG Declared patterns of language JSON were converted to sonar.lang.patterns.json : **/*.json
+22:31:29.856 DEBUG Declared patterns of language PHP were converted to sonar.lang.patterns.php : **/*.php,**/*.php3,**/*.php4,**/*.php5,**/*.phtml,**/*.inc
+22:31:29.856 DEBUG Declared patterns of language IPython Notebooks were converted to sonar.lang.patterns.ipynb : **/*.ipynb
+22:31:29.857 DEBUG Declared patterns of language Terraform were converted to sonar.lang.patterns.terraform : **/*.tf
+22:31:29.857 DEBUG Declared patterns of language Azure Resource Manager were converted to sonar.lang.patterns.azureresourcemanager : **/*.bicep
+22:31:29.857 DEBUG Declared patterns of language Text were converted to sonar.lang.patterns.text : 
+22:31:29.857 DEBUG Declared patterns of language VB.NET were converted to sonar.lang.patterns.vbnet : **/*.vb
+22:31:29.857 DEBUG Declared patterns of language CloudFormation were converted to sonar.lang.patterns.cloudformation : 
+22:31:29.858 DEBUG Declared patterns of language TypeScript were converted to sonar.lang.patterns.ts : **/*.ts,**/*.tsx,**/*.cts,**/*.mts
+22:31:29.858 DEBUG Declared patterns of language YAML were converted to sonar.lang.patterns.yaml : **/*.yaml,**/*.yml
+22:31:29.884 INFO  Preprocessing files...
+22:31:31.063 DEBUG 242 non excluded files in this Git repository
+22:31:31.125 INFO  2 languages detected in 6 preprocessed files (done) | time=1241ms
+22:31:31.126 INFO  0 files ignored because of inclusion/exclusion patterns
+22:31:31.126 INFO  0 files ignored because of scm ignore settings
+22:31:31.130 INFO  Loading plugins for detected languages
+22:31:31.131 DEBUG Detected languages: [js, json]
+22:31:31.131 INFO  Load/download plugins
+22:31:31.132 DEBUG Download plugin 'web' to '/opt/sonar-scanner/.sonar/_tmp/fileCache4174289653362632344.tmp'
+22:31:31.132 DEBUG --> GET http://host.docker.internal:9000/api/plugins/download?plugin=web
+22:31:31.142 DEBUG <-- 200 http://host.docker.internal:9000/api/plugins/download?plugin=web (9ms, unknown-length body)
+22:31:31.237 DEBUG Download plugin 'javascript' to '/opt/sonar-scanner/.sonar/_tmp/fileCache17015752795891661036.tmp'
+22:31:31.238 DEBUG --> GET http://host.docker.internal:9000/api/plugins/download?plugin=javascript
+22:31:31.252 DEBUG <-- 200 http://host.docker.internal:9000/api/plugins/download?plugin=javascript (12ms, unknown-length body)
+22:31:36.798 INFO  Load/download plugins (done) | time=5667ms
+22:31:36.799 DEBUG Optional language-specific plugins not loaded: [csharp, flex, go, jacoco, java, kotlin, php, python, vbnet, xml]
+22:31:36.816 DEBUG Plugins loaded:
+22:31:36.817 DEBUG   * HTML Code Quality and Security 3.33.0.9779 (web)
+22:31:36.818 DEBUG   * JavaScript/TypeScript/CSS Code Quality and Security 14.3.0.46350 (javascript)
+22:31:36.905 DEBUG Injecting branch properties: {}
+22:31:36.959 INFO  Load project repositories
+22:31:36.959 DEBUG --> GET http://host.docker.internal:9000/batch/project.protobuf?key=demo-sqe
+22:31:36.985 DEBUG <-- 200 http://host.docker.internal:9000/batch/project.protobuf?key=demo-sqe (26ms, 474-byte body)
+22:31:37.100 INFO  Load project repositories (done) | time=141ms
+22:31:37.122 DEBUG Available languages:
+22:31:37.123 DEBUG   * HTML => "web"
+22:31:37.123 DEBUG   * JSP => "jsp"
+22:31:37.123 DEBUG   * JavaScript => "js"
+22:31:37.123 DEBUG   * TypeScript => "ts"
+22:31:37.124 DEBUG   * CSS => "css"
+22:31:37.124 DEBUG   * Terraform => "terraform"
+22:31:37.124 DEBUG   * CloudFormation => "cloudformation"
+22:31:37.124 DEBUG   * Kubernetes => "kubernetes"
+22:31:37.124 DEBUG   * Docker => "docker"
+22:31:37.124 DEBUG   * Azure Resource Manager => "azureresourcemanager"
+22:31:37.124 DEBUG   * YAML => "yaml"
+22:31:37.124 DEBUG   * JSON => "json"
+22:31:37.124 DEBUG   * Text => "text"
+22:31:37.125 DEBUG   * Secrets => "secrets"
+22:31:37.142 INFO  Indexing files...
+22:31:37.143 INFO  Project configuration:
+22:31:37.143 INFO    Excluded sources: **/node_modules/**, **/dist/**, **/*.min.js, **/*.min.css, **/*.png, **/*.jpg, **/*.svg, **/*.woff, **/*.woff2, coverage/**
+22:31:37.144 DEBUG Injecting branch properties: {}
+22:31:37.154 DEBUG 'demo/bad.js' indexed with language 'js'
+22:31:37.161 DEBUG 'demo/dup1.js' indexed with language 'js'
+22:31:37.166 DEBUG 'demo/dup2.js' indexed with language 'js'
+22:31:37.171 DEBUG 'demo/math.js' indexed with language 'js'
+22:31:37.176 DEBUG 'demo/math.test.js' indexed with language 'js'
+22:31:37.182 DEBUG 'demo/package.json' indexed with language 'json'
+22:31:37.183 INFO  6 files indexed (done) | time=40ms
+22:31:37.184 INFO  Quality profile for js: Sonar way core
+22:31:37.184 INFO  Quality profile for json: Sonar way comprehensive
+22:31:37.184 INFO  ------------- Run sensors on module Demo-Flawed-Code
+22:31:37.219 DEBUG Injecting branch properties: {}
+22:31:37.224 INFO  Load metrics repository
+22:31:37.224 DEBUG --> GET http://host.docker.internal:9000/api/metrics/search?ps=500&p=1
+22:31:37.241 DEBUG <-- 200 http://host.docker.internal:9000/api/metrics/search?ps=500&p=1 (16ms, unknown-length body)
+22:31:37.251 INFO  Load metrics repository (done) | time=27ms
+22:31:37.649 INFO  Reflections took 74 ms to scan 1 urls, producing 30 keys and 313 values
+22:31:37.756 DEBUG 'Import external issues report for module' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.externalIssuesReportPaths: <empty>
+22:31:37.756 DEBUG 'IaC Terraform Sensor' skipped because there is no related file in current project
+22:31:37.757 DEBUG 'IaC TFLint report Sensor' skipped because there is no related file in current project
+22:31:37.757 DEBUG 'IaC Kustomization Sensor' skipped because there is no related file in current project
+22:31:37.758 DEBUG 'JavaScript/TypeScript module configuration' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.typescript.tsconfigPath: <empty>
+- sonar.eslint.reportPaths: <empty>
+- sonar.externalIssuesReportPaths: <empty>
+- sonar.typescript.tsconfigPaths: <empty>
+22:31:37.759 DEBUG 'JavaScript/TypeScript Coverage' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.typescript.tsconfigPath: <empty>
+- sonar.eslint.reportPaths: <empty>
+- sonar.javascript.lcov.reportPaths: <empty>
+- sonar.externalIssuesReportPaths: <empty>
+- sonar.typescript.tsconfigPaths: <empty>
+- sonar.typescript.lcov.reportPaths: <empty>
+22:31:37.759 DEBUG 'Import of TSLint issues' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.typescript.tsconfigPath: <empty>
+- sonar.eslint.reportPaths: <empty>
+- sonar.typescript.tslint.reportPaths: <empty>
+- sonar.javascript.lcov.reportPaths: <empty>
+- sonar.externalIssuesReportPaths: <empty>
+- sonar.typescript.tsconfigPaths: <empty>
+- sonar.typescript.lcov.reportPaths: <empty>
+22:31:37.759 DEBUG 'Import of stylelint issues' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.typescript.tsconfigPath: <empty>
+- sonar.eslint.reportPaths: <empty>
+- sonar.typescript.tslint.reportPaths: <empty>
+- sonar.javascript.lcov.reportPaths: <empty>
+- sonar.css.stylelint.reportPaths: <empty>
+- sonar.externalIssuesReportPaths: <empty>
+- sonar.typescript.tsconfigPaths: <empty>
+- sonar.typescript.lcov.reportPaths: <empty>
+22:31:37.760 DEBUG 'IaC Kubernetes Sensor' skipped because there is no related file in current project
+22:31:37.761 DEBUG 'Generic Test Executions Report' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.typescript.tsconfigPath: <empty>
+- sonar.eslint.reportPaths: <empty>
+- sonar.typescript.tslint.reportPaths: <empty>
+- sonar.javascript.lcov.reportPaths: <empty>
+- sonar.testExecutionReportPaths: <empty>
+- sonar.css.stylelint.reportPaths: <empty>
+- sonar.externalIssuesReportPaths: <empty>
+- sonar.typescript.tsconfigPaths: <empty>
+- sonar.typescript.lcov.reportPaths: <empty>
+22:31:37.762 DEBUG Sensors : IaC YAML File Type Classification Sensor -> IaC CloudFormation Sensor -> IaC cfn-lint report Sensor -> IaC hadolint report Sensor -> IaC Azure Resource Manager Sensor -> Java Config Sensor -> IaC Docker Sensor -> HTML -> TextAndSecretsSensor
+22:31:37.764 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+22:31:37.765 DEBUG Sensor IaC YAML File Type Classification Sensor is allowed to analyze hidden files
+22:31:37.801 DEBUG 'demo/package.json' generated metadata with charset 'UTF-8'
+22:31:37.803 DEBUG Classified input files for: 
+22:31:37.803 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=39ms
+22:31:37.803 INFO  Sensor IaC CloudFormation Sensor [iac]
+22:31:37.804 INFO  There are no files to be analyzed for the CloudFormation language
+22:31:37.804 INFO  Sensor IaC CloudFormation Sensor [iac] (done) | time=0ms
+22:31:37.804 INFO  Sensor IaC cfn-lint report Sensor [iac]
+22:31:37.804 INFO  Sensor IaC cfn-lint report Sensor [iac] (done) | time=0ms
+22:31:37.804 INFO  Sensor IaC hadolint report Sensor [iac]
+22:31:37.805 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+22:31:37.805 INFO  Sensor IaC Azure Resource Manager Sensor [iac]
+22:31:37.806 INFO  There are no files to be analyzed for the Azure Resource Manager language
+22:31:37.806 INFO  Sensor IaC Azure Resource Manager Sensor [iac] (done) | time=1ms
+22:31:37.807 INFO  Sensor Java Config Sensor [iac]
+22:31:37.807 INFO  There are no files to be analyzed for the Java language
+22:31:37.807 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+22:31:37.808 INFO  Sensor IaC Docker Sensor [iac]
+22:31:37.808 DEBUG Sensor IaC Docker Sensor is allowed to analyze hidden files
+22:31:37.808 INFO  There are no files to be analyzed for the Docker language
+22:31:37.809 INFO  Sensor IaC Docker Sensor [iac] (done) | time=1ms
+22:31:37.809 INFO  Sensor HTML [web]
+22:31:37.819 INFO  Sensor HTML [web] (done) | time=10ms
+22:31:37.820 INFO  Sensor TextAndSecretsSensor [text]
+22:31:37.820 DEBUG Sensor TextAndSecretsSensor is allowed to analyze hidden files
+22:31:37.839 INFO  Available processors: 12
+22:31:37.840 INFO  Using 12 threads for analysis.
+22:31:37.841 DEBUG Initializing SecretsStateContainer with specification loader.
+22:31:38.164 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+22:31:38.197 DEBUG Initializing ChecksContainer with checks and trie construction.
+22:31:38.206 DEBUG ChecksContainer initialized successfully with 2 checks without pre-filter and trie containing 74 patterns.
+22:31:38.206 INFO  Start fetching files for the text and secrets analysis
+22:31:38.217 DEBUG Read the "git --version" stdout in thread "pool-5-thread-1"
+22:31:38.217 DEBUG git --version returned: git version 2.50.1
+22:31:38.220 INFO  Using Git CLI to retrieve dirty files
+22:31:38.222 DEBUG Read the "git -C /usr/src status --untracked-files=all --porcelain" stdout in thread "pool-5-thread-1"
+22:31:38.238 DEBUG Process [git, -C, /usr/src, status, --untracked-files=all, --porcelain] exited with code 128
+22:31:38.239 DEBUG Unable to retrieve git status
+22:31:38.239 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+22:31:38.240 INFO  Starting the text and secrets analysis
+22:31:38.244 INFO  6 source files to be analyzed for the text and secrets analysis
+22:31:38.307 DEBUG 'demo/bad.js' generated metadata with charset 'UTF-8'
+22:31:38.336 DEBUG 'demo/math.test.js' generated metadata with charset 'UTF-8'
+22:31:38.394 DEBUG 'demo/dup2.js' generated metadata with charset 'UTF-8'
+22:31:38.404 DEBUG 'demo/dup1.js' generated metadata with charset 'UTF-8'
+22:31:38.447 DEBUG 'demo/math.js' generated metadata with charset 'UTF-8'
+22:31:38.454 INFO  6/6 source files have been analyzed for the text and secrets analysis
+22:31:38.454 DEBUG Analyzed files for the text and secrets analysis: 6
+22:31:38.454 INFO  Skipped 1 file(s) in the secrets analysis due to automatic test file detection
+22:31:38.455 DEBUG Unable to retrieve git status
+22:31:38.457 INFO  Sensor TextAndSecretsSensor [text] (done) | time=637ms
+22:31:38.461 INFO  ------------- Run sensors on project
+22:31:38.559 DEBUG Added 199 checks for language='ts', repository='typescript'
+22:31:38.561 DEBUG Added 200 checks for language='js', repository='javascript'
+22:31:38.571 DEBUG No registered JsAnalysisConsumer.
+22:31:38.704 DEBUG 'Generic Coverage Report' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.coverageReportPaths: <empty>
+22:31:38.705 DEBUG 'Import external issues report' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.coverageReportPaths: <empty>
+- sonar.externalIssuesReportPaths: <empty>
+22:31:38.705 DEBUG 'Import external issues report from SARIF file.' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.coverageReportPaths: <empty>
+- sonar.sarifReportPaths: <empty>
+- sonar.externalIssuesReportPaths: <empty>
+22:31:38.705 DEBUG 'Java CPD Block Indexer' skipped because there is no related file in current project
+22:31:38.706 DEBUG Sensors : JavaScript/TypeScript/CSS analysis -> IaC Project Sensor -> Zero Coverage Sensor
+22:31:38.706 INFO  Sensor JavaScript/TypeScript/CSS analysis [javascript]
+22:31:38.709 DEBUG Analysis of unchanged files will not be skipped (current analysis requires all files to be analyzed)
+22:31:38.734 DEBUG Deploying the bridge server into /tmp/.scannerwork/.sonartmp/bridge-bundle
+22:31:38.984 DEBUG Setting deploy location to /tmp/.scannerwork/.sonartmp/bridge-bundle
+22:31:38.984 INFO  Detected os: Linux arch: amd64 alpine: false. Platform: LINUX_X64
+22:31:38.984 INFO  Deploy location /opt/sonar-scanner/.sonar/js/node-runtime, tagetRuntime: /opt/sonar-scanner/.sonar/js/node-runtime/node,  version: /opt/sonar-scanner/.sonar/js/node-runtime/version.txt
+22:31:38.985 DEBUG Lock acquired for extraction
+22:31:38.988 DEBUG Extracting embedded node to /opt/sonar-scanner/.sonar/js/node-runtime/node
+22:31:41.538 DEBUG Launching command /opt/sonar-scanner/.sonar/js/node-runtime/node -v
+22:31:41.543 DEBUG Deployed node version v24.22.1
+22:31:41.543 DEBUG Starting server
+22:31:41.543 DEBUG Creating Node.js process to start the bridge server on port 0 
+22:31:41.545 INFO  Using embedded Node.js runtime.
+22:31:41.545 INFO  Using Node.js executable: '/opt/sonar-scanner/.sonar/js/node-runtime/node'.
+22:31:41.546 DEBUG Checking Node.js version
+22:31:41.546 DEBUG Launching command /opt/sonar-scanner/.sonar/js/node-runtime/node -v
+22:31:41.555 DEBUG Using Node.js v24.22.1.
+22:31:41.557 DEBUG Launching command /opt/sonar-scanner/.sonar/js/node-runtime/node /tmp/.scannerwork/.sonartmp/bridge-bundle/package/bin/server.cjs 0 127.0.0.1 false 15000
+22:31:43.698 DEBUG The worker thread is running
+22:31:43.702 INFO  Memory configuration: OS (7798 MB), Node.js (2240 MB).
+22:31:43.783 INFO  gRPC analyze-project server listening on 127.0.0.1:46145
+22:31:43.959 DEBUG Bridge server started on port 46145 in 2417 ms
+22:31:43.963 INFO  Plugin version: [14.3.0.46350]
+22:31:43.965 DEBUG Cache strategy set to 'WRITE_ONLY' for file 'demo/bad.js' as current analysis requires all files to be analyzed
+22:31:43.967 DEBUG Cache strategy set to 'WRITE_ONLY' for file 'demo/math.js' as current analysis requires all files to be analyzed
+22:31:43.967 DEBUG Cache strategy set to 'WRITE_ONLY' for file 'demo/dup1.js' as current analysis requires all files to be analyzed
+22:31:43.968 DEBUG Cache strategy set to 'WRITE_ONLY' for file 'demo/dup2.js' as current analysis requires all files to be analyzed
+22:31:43.968 DEBUG Cache strategy set to 'WRITE_ONLY' for file 'demo/math.test.js' as current analysis requires all files to be analyzed
+22:31:45.853 DEBUG Test file detected: /usr/src/demo/math.test.js. If this file should not use test rules, please configure sonar.tests or adjust your sonar.sources/sonar.inclusions to explicitly include it as MAIN.
+22:31:45.859 DEBUG Clearing dependencies cache
+22:31:45.861 DEBUG Resetting the TsConfigCache
+22:31:45.861 DEBUG Cleared tsconfig content cache
+22:31:45.861 DEBUG Cleared program options caches
+22:31:45.861 DEBUG Cleared source file content cache and parsed SourceFile cache
+22:31:45.861 DEBUG Clearing dependencies cache
+22:31:45.861 DEBUG Resetting the TsConfigCache
+22:31:45.861 DEBUG Cleared tsconfig content cache
+22:31:45.861 DEBUG Cleared program options caches
+22:31:46.068 DEBUG File ignored due to js/ts exclusions: /usr/src/js/reveal.d.ts
+22:31:46.093 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/config.d.ts
+22:31:46.093 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/plugin
+22:31:46.094 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/reset.css
+22:31:46.094 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/reveal.css
+22:31:46.094 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/reveal.d.ts
+22:31:46.094 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/reveal.js
+22:31:46.094 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/reveal.mjs
+22:31:46.094 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/theme
+22:31:46.094 DEBUG File ignored due to js/ts exclusions: /usr/src/dist/utils
+22:31:46.153 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/COMMIT_EDITMSG
+22:31:46.154 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/config
+22:31:46.154 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/description
+22:31:46.155 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/HEAD
+22:31:46.155 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/hooks
+22:31:46.155 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/index
+22:31:46.156 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/info
+22:31:46.157 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/logs
+22:31:46.157 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/objects
+22:31:46.158 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/packed-refs
+22:31:46.159 DEBUG File ignored due to js/ts exclusions: /usr/src/.git/refs
+22:31:46.175 INFO  Found 3 tsconfig.json file(s): [/usr/src/react/demo/tsconfig.json, /usr/src/react/tsconfig.json, /usr/src/tsconfig.json]
+22:31:51.913 DEBUG Cache entry created for key 'js:ast:14.3.0.46350:demo-sqe:demo/dup1.js'
+22:31:51.930 DEBUG Cache entry created for key 'js:filemetadata:14.3.0.46350:demo-sqe:demo/dup1.js'
+22:31:51.933 DEBUG Cache entry created for key 'js:ast:14.3.0.46350:demo-sqe:demo/dup2.js'
+22:31:51.946 DEBUG Cache entry created for key 'js:filemetadata:14.3.0.46350:demo-sqe:demo/dup2.js'
+22:31:51.948 DEBUG Initializing linter with S6850,S4790,S2251,S6853,S8479,S6852,S2137,S5527,S2259,S930,S1848,S2819,S3330,S6842,S6843,S4423,S6840,S2123,S2245,S6841,S6846,S5876,S3699,S4426,S6845,S6848,S6275,S5863,S2598,S5868,S6958,S6959,S6281,S6265,S6821,S5850,S6268,S5852,S3796,S5973,S5734,S6825,S5736,S3799,S128,S6823,S5856,S5739,S6270,S1143,S3785,S5725,S2699,S5845,S5728,S8441,S8786,S8785,S8784,S6249,S3531,S2201,S4502,S2688,S4507,S1244,S6252,S2310,S5148,S2432,S3403,S1219,S9072,S8780,S5254,S5256,S3516,S1101,S5260,S6351,S6332,S6333,S6330,S5122,S4275,S4036,S8998,S3981,S4830,S5247,S3984,S3500,S1314,S1313,S7790,S7773,S6442,S8984,S6321,S6443,S8982,S4143,S8988,S6323,S6324,S8985,S6329,S6327,S3854,S4822,S6328,S3616,S9163,S9162,S8990,S2092,S6671,S9026,S9025,S6793,S2077,S6435,S7767,S2871,S6439,S6319,S6437,S6679,S6438,S2755,S6317,S2999,S2757,S2639,S9153,S5693,S9379,S5332,S9135,S2187,S6303,S2068,S2189,S9019,S4125,S6544,S6302,S7639,S6308,S6426,S6789,S1534,S3834,S1656,S1536,S9383,S9380,S8951,S6534,S5443,S2970,S9128,S8959,S6418,S5689,S1763,S1764,S1523,S2612,S1527,S1529,S9011,S6761,S9115,S7059,S9114,S905,S6523,S7733,S1751,S7737,S3812,S7739,S7060,S6750,S5542,S9107,S5547,S6638,S7727,S1862,S6756,S7725,S6757,S3923,S6080,S6861,S5659,S6746,S2703,S128,S6958,S6959,S2598,S5868,S5863,S6275,S1143,S6270,S6848,S6846,S3699,S5876,S4426,S6845,S6842,S6843,S2123,S4423,S6840,S2245,S6841,S3330,S6281,S2819,S1848,S2137,S5527,S6853,S8479,S6852,S6850,S4790,S2251,S5659,S6746,S6861,S2310,S5148,S1101,S5260,S6351,S4507,S4502,S2688,S3531,S6249,S2201,S8785,S8786,S8784,S8780,S9072,S5728,S2699,S5725,S5845,S1244,S6252,S5739,S5734,S6825,S5736,S3799,S6823,S5856,S6268,S5850,S6821,S5852,S5973,S6265,S8441,S2639,S2999,S2757,S7649,S6438,S6317,S6437,S6319,S7647,S6679,S6439,S2755,S2077,S7767,S2871,S6435,S7641,S9026,S6671,S9025,S6793,S9383,S9380,S1314,S1313,S3616,S6328,S6327,S3854,S6329,S4822,S7656,S6324,S8988,S6323,S7654,S8985,S7655,S7773,S7652,S8984,S7653,S6443,S7650,S6321,S4143,S6442,S7651,S8982,S9153,S3984,S8998,S4036,S3981,S4830,S5247,S6330,S6333,S4275,S5122,S6332,S8990,S2092,S9163,S9162,S3516,S1219,S5256,S5254,S7790,S3923,S1862,S5547,S7727,S6638,S6756,S6757,S7725,S5542,S4335,S9107,S6750,S3812,S7739,S1751,S7737,S7733,S6523,S6761,S7059,S9115,S9114,S6080,S1529,S1523,S1764,S1763,S8959,S5689,S6418,S2612,S5443,S2970,S9128,S6534,S8951,S7060,S1534,S7639,S6426,S6789,S6308,S1656,S2187,S6302,S6544,S4124,S9019,S2068,S6303,S5693,S9379,S5332,S9135,S9011,S905
+22:31:51.948 INFO  5 source files to be analyzed
+22:31:51.948 INFO  Creating TypeScript(6.0.3) program with configuration file /usr/src/react/demo/tsconfig.json [lib: lib.es2020.d.ts, lib.dom.d.ts]
+22:31:51.948 INFO  No files to analyze from tsconfig /usr/src/react/demo/tsconfig.json
+22:31:51.948 INFO  Creating TypeScript(6.0.3) program with configuration file /usr/src/react/tsconfig.json [lib: lib.es2020.d.ts, lib.dom.d.ts]
+22:31:51.948 INFO  No files to analyze from tsconfig /usr/src/react/tsconfig.json
+22:31:51.948 INFO  Creating TypeScript(6.0.3) program with configuration file /usr/src/tsconfig.json [lib: lib.es2020.d.ts, lib.dom.d.ts, lib.dom.iterable.d.ts]
+22:31:51.948 INFO  Discovered referenced tsconfig: /usr/src/tsconfig.node.json
+22:31:51.949 INFO  No files to analyze from tsconfig /usr/src/tsconfig.json
+22:31:51.949 INFO  Creating TypeScript(6.0.3) program with configuration file /usr/src/tsconfig.node.json [lib: lib.esnext.d.ts, lib.dom.d.ts]
+22:31:51.949 INFO  No files to analyze from tsconfig /usr/src/tsconfig.node.json
+22:31:51.949 INFO  Analyzing 5 file(s) using merged compiler options [lib: lib.esnext.d.ts, lib.dom.d.ts]
+22:31:51.949 DEBUG Analyzing file "/usr/src/demo/dup1.js"
+22:31:51.949 DEBUG No ECMAScript version detected for "/usr/src/demo/dup1.js"; using default 2018
+22:31:51.949 DEBUG Parsing /usr/src/demo/dup1.js with typescript-eslint/parser
+22:31:51.949 DEBUG Analyzing file "/usr/src/demo/dup2.js"
+22:31:51.949 DEBUG No ECMAScript version detected for "/usr/src/demo/dup2.js"; using default 2018
+22:31:51.949 DEBUG Parsing /usr/src/demo/dup2.js with typescript-eslint/parser
+22:31:51.950 DEBUG Analyzing file "/usr/src/demo/bad.js"
+22:31:51.950 DEBUG No ECMAScript version detected for "/usr/src/demo/bad.js"; using default 2018
+22:31:51.950 DEBUG Parsing /usr/src/demo/bad.js with typescript-eslint/parser
+22:31:51.950 DEBUG Analyzing file "/usr/src/demo/math.test.js"
+22:31:51.950 DEBUG No ECMAScript version detected for "/usr/src/demo/math.test.js"; using default 2018
+22:31:51.950 DEBUG Parsing /usr/src/demo/math.test.js with typescript-eslint/parser
+22:31:51.950 DEBUG Analyzing file "/usr/src/demo/math.js"
+22:31:51.950 DEBUG No ECMAScript version detected for "/usr/src/demo/math.js"; using default 2018
+22:31:51.950 DEBUG Parsing /usr/src/demo/math.js with typescript-eslint/parser
+22:31:51.950 INFO  5/5 source files have been analyzed
+22:31:51.950 DEBUG Cleared source file content cache and parsed SourceFile cache
+22:31:51.950 DEBUG Cache entry created for key 'js:ast:14.3.0.46350:demo-sqe:demo/bad.js'
+22:31:51.961 DEBUG Cache entry created for key 'js:filemetadata:14.3.0.46350:demo-sqe:demo/bad.js'
+22:31:51.964 DEBUG Not enough content in 'demo/math.test.js' to have CPD blocks, it will not be part of the duplication detection
+22:31:51.964 DEBUG Cache entry created for key 'js:ast:14.3.0.46350:demo-sqe:demo/math.test.js'
+22:31:51.975 DEBUG Cache entry created for key 'js:filemetadata:14.3.0.46350:demo-sqe:demo/math.test.js'
+22:31:51.979 DEBUG Not enough content in 'demo/math.js' to have CPD blocks, it will not be part of the duplication detection
+22:31:51.980 DEBUG Cache entry created for key 'js:ast:14.3.0.46350:demo-sqe:demo/math.js'
+22:31:51.989 DEBUG Cache entry created for key 'js:filemetadata:14.3.0.46350:demo-sqe:demo/math.js'
+22:31:51.992 DEBUG Telemetry saved: {javascript.telemetry.typescript.compiler-options.lib=dom,dom.iterable,es2020,esnext, javascript.telemetry.typescript.compiler-options.strictPropertyInitialization=true, javascript.telemetry.typescript.compiler-options.useUnknownInCatchVariables=true, javascript.telemetry.generated-sources.tagged-file-count=0, javascript.telemetry.typescript.compiler-options.strictFunctionTypes=true, javascript.telemetry.typescript.compiler-options.allowImportingTsExtensions=true, javascript.telemetry.typescript.native-preview=false, javascript.telemetry.typescript.compiler-options.noImplicitAny=true, javascript.telemetry.generated-sources.resolved-file-count=0, javascript.telemetry.typescript.compiler-options.alwaysStrict=true, javascript.telemetry.typescript.versions=6.0.2, javascript.runtime.version=24.22.1, javascript.telemetry.ecmascript.versions=ES2020, javascript.telemetry.typescript.compiler-options.strictBindCallApply=true, javascript.telemetry.typescript.compiler-options.module=esnext, javascript.telemetry.typescript.compiler-options.skipLibCheck=true, javascript.telemetry.typescript.compiler-options.noImplicitThis=true, javascript.telemetry.typescript.compiler-options.strictNullChecks=true, javascript.telemetry.typescript.compiler-options.resolveJsonModule=true, javascript.telemetry.typescript.program-creation.failed=0, javascript.runtime.major-version=24, javascript.telemetry.typescript.compiler-options.strict=true, javascript.telemetry.typescript.compiler-options.useDefineForClassFields=true, javascript.telemetry.typescript.program-creation.succeeded=5, javascript.runtime.node-executable-origin=embedded, javascript.telemetry.typescript.compiler-options.moduleResolution=bundler, javascript.telemetry.module-type.cjs-file-count=5, javascript.telemetry.generated-sources.family-count=0, javascript.telemetry.typescript.compiler-options.esModuleInterop=true, javascript.telemetry.typescript.compiler-options.target=es2020, javascript.telemetry.typescript.compiler-options.isolatedModules=true, javascript.telemetry.typescript.program-creation.attempted=5, javascript.telemetry.typescript.compiler-options.jsx=react-jsx, javascript.telemetry.typescript.compiler-options.strictBuiltinIteratorReturn=true, javascript.telemetry.typescript.compiler-options.allowSyntheticDefaultImports=true, javascript.telemetry.module-type.esm-file-count=0}
+22:31:51.992 INFO  Hit the cache for 0 out of 5
+22:31:51.993 INFO  Miss the cache for 5 out of 5: ANALYSIS_MODE_INELIGIBLE [5/5]
+22:31:51.993 INFO  Sensor JavaScript/TypeScript/CSS analysis [javascript] (done) | time=13287ms
+22:31:51.993 INFO  Sensor IaC Project Sensor [iac]
+22:31:51.994 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+22:31:51.994 INFO  Sensor Zero Coverage Sensor
+22:31:51.999 INFO  Sensor Zero Coverage Sensor (done) | time=5ms
+22:31:52.000 INFO  ------------- Gather SCA dependencies on project
+22:31:52.005 INFO  Dependency analysis skipped
+22:31:52.012 INFO  CPD Executor 2 files had no CPD blocks
+22:31:52.012 INFO  CPD Executor Calculating CPD for 3 files
+22:31:52.013 DEBUG Detection of duplications for /usr/src/demo/bad.js
+22:31:52.018 DEBUG Detection of duplications for /usr/src/demo/dup1.js
+22:31:52.021 DEBUG Detection of duplications for /usr/src/demo/dup2.js
+22:31:52.022 INFO  CPD Executor CPD calculation finished (done) | time=9ms
+22:31:52.140 INFO  SCM revision ID '2d7dd08106afb511ecaf7b4612a2c882a2521e9f'
+22:31:52.240 INFO  Analysis report generated in 215ms, dir size=154.3 kB
+22:31:52.249 INFO  Analysis report compressed in 9ms, zip size=26.8 kB
+22:31:52.250 INFO  Analysis report generated in /tmp/.scannerwork/scanner-report
+22:31:52.250 DEBUG Upload report
+22:31:52.257 DEBUG --> POST http://host.docker.internal:9000/api/ce/submit?projectKey=demo-sqe&projectName=Demo-Flawed-Code (27032-byte body)
+22:31:52.278 DEBUG <-- 200 http://host.docker.internal:9000/api/ce/submit?projectKey=demo-sqe&projectName=Demo-Flawed-Code (20ms, 76-byte body)
+22:31:52.281 INFO  Analysis report uploaded in 31ms
+22:31:52.282 DEBUG Report metadata written to /tmp/.scannerwork/report-task.txt
+22:31:52.282 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://host.docker.internal:9000/dashboard?id=demo-sqe
+22:31:52.283 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+22:31:52.283 INFO  More about the report processing at http://host.docker.internal:9000/api/ce/task?id=bff4fd1e-b0db-40c9-bdb5-400f715e4a60
+22:31:52.286 DEBUG Post-jobs : 
+22:31:52.290 DEBUG Shutting down gRPC analyze-project server: lease completed
+22:31:52.301 DEBUG The worker thread exited with code 1
+22:31:52.302 DEBUG The worker thread exited with code 1
+22:31:52.390 INFO  Analysis total time: 26.708 s
+22:31:52.393 DEBUG Cleanup org.eclipse.jgit.util.FS$FileStoreAttributes$$Lambda/0x000074a660316168@1c5c616f during JVM shutdown
+22:31:52.393 INFO  SonarScanner Engine completed successfully
+22:31:52.418 INFO  EXECUTION SUCCESS
+22:31:52.418 INFO  Total time: 33.096s

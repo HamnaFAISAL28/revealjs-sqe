@@ -1,0 +1,29 @@
+21:57:27.355 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+21:57:27.358 INFO  Project root configuration file: /usr/src/sonar-project.properties
+21:57:27.387 INFO  SonarScanner CLI 8.3.1.16491
+21:57:27.393 INFO  Linux 6.18.54.1-microsoft-standard-WSL2 amd64
+21:57:28.349 INFO  Communicating with SonarQube Community Build 26.11.0.134175
+21:57:28.350 INFO  JRE provisioning: os[linux], arch[x86_64]
+21:57:33.549 INFO  Starting SonarScanner Engine...
+21:57:33.550 INFO  Java 21.0.13 Eclipse Adoptium (64-bit)
+21:57:34.458 INFO  Load global settings
+21:57:34.594 INFO  Load global settings (done) | time=137ms
+21:57:34.597 INFO  Server id: 147B411E-AaG3rMtH8O6oglmRLkhz
+21:57:34.928 INFO  Loading required plugins
+21:57:34.929 INFO  Load plugins index
+21:57:34.967 INFO  Load plugins index (done) | time=35ms
+21:57:34.968 INFO  Load/download plugins
+21:57:36.379 INFO  Load/download plugins (done) | time=1411ms
+21:57:36.669 INFO  Load project settings for component key: 'demo-sqe'
+21:57:36.683 INFO  Failed to load settings with NOT_FOUND error, which can happen if the project does not exist yet
+21:57:36.694 INFO  Process project properties
+21:57:36.706 INFO  Process project properties (done) | time=12ms
+21:57:36.717 INFO  Project key: demo-sqe
+21:57:36.718 INFO  Base dir: /usr/src
+21:57:36.718 INFO  Working dir: /tmp/.scannerwork
+21:57:36.904 INFO  Load quality profiles
+21:57:36.945 INFO  Load quality profiles (done) | time=40ms
+21:57:36.981 INFO  Load active rules
+21:57:37.007 ERROR You're not authorized to analyze this project or the project doesn't exist on SonarQube and you're not authorized to create it. Please contact an administrator.
+21:57:37.026 INFO  EXECUTION FAILURE
+21:57:37.027 INFO  Total time: 9.675s
